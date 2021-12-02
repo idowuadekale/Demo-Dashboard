@@ -5,45 +5,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax Website</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="icon" href="download.jpg">
+    <title>Kickstart | Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <link rel="icon" href="./images/icon.png">
 </head>
 
 <body>
-    <!--Phrase one-->
-    <div class="img1">
-        <div class="caption"></div>
-        <div class="border" style=" font-size: 400%; color: black; text-align: center;">
-            <h3>Digital Aspect</h3>
+    <div class="wrapper">
+        <div class="section">
+            <div class="top_navbar">
+                <div class="hamburger">
+                    <a href="#">
+                        <i class="fas fa-bars"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="profile">
+                <img src="./images/kickstart.png" alt="kickstart">
+                <h3>Kickstart</h3>
+                <p>Project</p>
+
+                <ul>
+                    <li>
+                        <a href="blank.html" class="active">
+                            <span class="icon"><i class="fas fa-home"></i></span>
+                            <span class="item">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-desktop"></i></span>
+                            <span class="item">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="fas fa-database"></i></span>
+                            <span class="item">Development</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"> <i class="fas fa-user-shield"></i></span>
+                            <span class="item">Account.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"> <i class="fas fa-tachometer"></i></span>
+                            <span class="item"> Option</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"> <i class="fas fa-cog"></i></span>
+                            <span class="item">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-
-    <!--Phrase two-->
-    <div class="parallax">
-        <div class="next">
-            Next up is an information series of how computer understands what you indicate them to perform.
-        </div>
+    <script>
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function() {
+            document.querySelector("body").classList.toggle("active");
+        })
+    </script>
+    <table class="table" id="dataTable" width="100%" cellspacing="0" height="50px">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Founder</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Facebook</td>
+                <td>Mark Zuckerberg</td>
+                <td>New York, U.S</td>
+            </tr>
+            <tr>
+                <td>Whatsapp</td>
+                <td>Jan Koum</td>
+                <td>America </td>
+            </tr>
+            <tr>
+                <td>Instagram</td>
+                <td>Kevin Systrom</td>
+                <td>America, U.S.A</td>
+            </tr>
+            <tr>
+                <td>Google</td>
+                <td>Sergey Brin and Larry Page</td>
+                <td>America, U.S.A</td>
+            </tr>
+            <tr>
+                <td>Iphones</td>
+                <td>Steve Jobs</td>
+                <td>America</td>
+            </tr>
+            <tr>
+                <td>Bitcoin</td>
+                <td>Satoshi Nakamoto</td>
+                <td>Japanese</td>
+            </tr>
+            </tbody>
+    </table>
     </div>
-
-    <!--Phrase three-->
-    <div class="img2">
-        <div class="caption"></div>
-        <div class="border1">Computer serves a media of communication</div>
     </div>
-
-    <!--Phrase four-->
-    <div id="up">
-        <h3>Up Next </h3>
-        <p>Parallax scrolling is a website trend whereby background moves at a different speed than the other scroll.</p>
     </div>
-
-    <!--Phrase five-->
-    <div class="img">
-        <div class="caption"></div>
-        <div class="border2">Computer Impacts</div>
-    </div>
-
 </body>
 
 </html>

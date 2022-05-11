@@ -51,13 +51,36 @@ p {
 
 /* End of code For cursor inside a circle */
 
+.message-btn {
+    border-radius: 4px;
+    padding: 7px 25px 8px 25px;
+    white-space: nowrap;
+    transition: 0.3s;
+    font-size: 14px;
+    display: inline-block;
+    border: 2px solid darkblue;
+    text-decoration: none;
+}
+
+.message:hover {
+    background-color: darkblue;
+    color: #fff;
+}
+
+@media (max-width: 992px) {
+    .message-btn {
+        padding: 7px 20px 8px 20px;
+        margin-right: 15px;
+    }
+}
+
 .wrapper .sidebar {
     background: rgb(5, 68, 104);
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 225px;
-    height: fixed;
+    height: 100%;
     padding: 20px 0;
     transition: all 0.5s ease;
 }
@@ -92,12 +115,7 @@ p {
     color: rgb(241, 237, 237);
     font-size: 16px;
     position: relative;
-}
-
-.wrapper .sidebar ul li a .icon {
-    color: #dee4ec;
-    width: 30px;
-    display: inline-block;
+    text-decoration: none;
 }
 
 .wrapper .sidebar ul li a:hover,
@@ -105,11 +123,6 @@ p {
     color: #0c7db1;
     background: white;
     border-right: 2px solid rgb(5, 68, 104);
-}
-
-.wrapper .sidebar ul li a:hover .icon,
-.wrapper .sidebar ul li a.active .icon {
-    color: #0c7db1;
 }
 
 .wrapper .sidebar ul li a:hover:before,
@@ -131,15 +144,11 @@ p {
     padding: 0 30px;
 }
 
-
-/* .wrapper .section .top_navbar .hamburger a {
-    font-size: 28px;
-    color: #f4fbff;
+.fade {
+    visibility: hidden;
+    display: inline-block;
+    margin: 20px;
 }
-
-.wrapper .section .top_navbar .hamburger a:hover {
-    color: #a2ecff;
-} */
 
 body.active .wrapper .sidebar {
     left: -225px;
@@ -154,16 +163,58 @@ body.active .wrapper .section {
     color: #fff;
     letter-spacing: 3px;
     text-align: center;
-    border: 3px solid black;
-    border-spacing: 0;
-    border-radius: 500px;
-    border-width: 2px;
-    border-style: outset;
 }
+
+
+/* Dark Mode Displays */
 
 .dark-mode {
     background-color: black;
     color: white;
+}
+
+.dark-mode .slideshow-container {
+    background: #292b2a;
+}
+
+.dark-mode .sidebar {
+    background: #0f1063;
+}
+
+.dark-mode .section .top_navbar {
+    background: #8b0909;
+}
+
+.dark-mode .message-btn:hover {
+    background-color: #0c1110;
+    color: rgb(201, 166, 166);
+}
+
+.dark-mode .message-btn {
+    border: 2px solid #0c1110;
+    color: #fff;
+}
+
+.dark-mode button {
+    background: darkslategrey;
+}
+
+.dark-mode .dot-container {
+    background: rgb(184, 182, 182);
+}
+
+.dark-mode .wrapper .sidebar ul li a {
+    border-bottom: 1px solid #232488;
+}
+
+.dark-mode .circle::before {
+    border: 1.5px solid #b4bebc;
+}
+
+button {
+    background: #0c1110;
+    color: #fff;
+    cursor: pointer;
 }
 
 .button {
@@ -180,4 +231,155 @@ a {
 a:hover {
     color: black;
     background-color: #fff;
+}
+
+
+/* Content in the Dashboard */
+
+
+/* .slide-page {} */
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: static;
+    background: #c9c6c6f1;
+    width: 100%;
+}
+
+
+/* Slides */
+
+.mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    margin-top: -280px;
+}
+
+.prev {
+    margin-left: 250px;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    margin-right: 200px;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(12, 12, 153);
+    color: white;
+}
+
+
+/* The dot/bullet/indicator container */
+
+.dot-container {
+    text-align: center;
+    padding: 20px;
+    background: #292b2a;
+}
+
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+
+/* Add a background color to the active dot/circle */
+
+.active,
+.dot:hover {
+    background-color: #052c66;
+}
+
+
+/* Add an italic font style to all quotes */
+
+q {
+    font-style: italic;
+}
+
+
+/* Add a blue color to the author */
+
+.author {
+    color: cornflowerblue;
+}
+
+
+/* Responsive columns */
+
+@media screen and (max-width: 1296px) {
+    .prev,
+    .next {
+        display: block;
+        margin-top: -240px;
+    }
+    .prev {
+        position: absolute;
+        margin-left: 10px;
+    }
+    .next {
+        position: absolute;
+        margin-right: 20px;
+    }
+    .sidebar {
+        visibility: hidden;
+    }
+    .wrapper .section .top_navbar {
+        margin-left: -250px;
+    }
+    .fade {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-height: 630px) {
+    .prev,
+    .next {
+        margin-top: -100px;
+    }
+    .wrapper .section .top_navbar {
+        height: 80px;
+    }
+    .fade {
+        visibility: visible;
+    }
 }
